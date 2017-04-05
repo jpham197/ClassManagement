@@ -3,11 +3,11 @@ public class Student implements Comparable<Student> {
 	private static int count;
 	private String firstName;
 	private String lastName;
-	private long gpa;
+	private float gpa;
 
-	public Student(String firstName, String lastName, long gpa) {
-		this.firstName = firstName;
+	public Student(String lastName, String firstName, float gpa) {
 		this.lastName = lastName;
+		this.firstName = firstName;
 		this.gpa = gpa;
 		count++;
 	}
@@ -20,7 +20,7 @@ public class Student implements Comparable<Student> {
 		return lastName;
 	}
 
-	public long getGpa() {
+	public float getGpa() {
 		return gpa;
 	}
 
@@ -32,7 +32,7 @@ public class Student implements Comparable<Student> {
 		this.lastName = lastName;
 	}
 
-	public void setGpa(long gpa) {
+	public void setGpa(float gpa) {
 		this.gpa = gpa;
 	}
 
@@ -49,5 +49,8 @@ public class Student implements Comparable<Student> {
 		}
 	}
 
+	public String toString() {
+		return lastName+", "+firstName+"\nGPA: "+gpa;
+	}
 
 }
