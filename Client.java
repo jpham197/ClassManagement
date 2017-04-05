@@ -17,11 +17,19 @@ public class Client {
 		String enteredKey = "";
 		enteredKey = user.nextLine();
 
-		if (enteredKey.equals("m")||enteredKey.equals("M")) {
-			m.showMenu();
-			keyPress();
-		} else if (enteredKey.equals("e")||enteredKey.equals("E")){
-			System.exit(0);
+		switch (enteredKey) {
+			case "m":
+			case "M":
+				m.showMenu();
+				break;
+			case "e":
+			case "E":
+				System.exit(0);
+				break;
+			default:
+				System.out.println("Please enter a registered key.");
+				m.showMenu();
+				break;
 		}
 	}
 }
