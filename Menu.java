@@ -8,10 +8,9 @@ public class Menu {
 
 	*/
 
-	public void showMenu() {
-		Client c = new Client();
+	public static void showMenu() {
 		System.out.println("Here are your menu options:\n1)Show class list\n2)Add student\n3)Delete student\nM)Open menu\nE)Close program");
-		c.keyPress(); //calls keyPress method
+		Client.keyPress(); //calls keyPress method
 
 	}
 }

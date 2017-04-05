@@ -50,7 +50,7 @@ public class Student implements Comparable<Student> {
 	}
 
 	public String toString() {
-		return lastName+", "+firstName+"\nGPA: "+gpa;
+		return lastName+", "+firstName+": "+gpa;
 	}
 
 }

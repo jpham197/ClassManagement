@@ -3,11 +3,10 @@ import java.util.ArrayList;
 
 public class Classroom {
 
-	private static ArrayList<Student> roster;
+	private static ArrayList<Student> roster = new ArrayList<Student>();
 
 	public static void createStudent() {
 		Scanner user = new Scanner(System.in);
-		Menu m = new Menu();
 		String last = "";
 		String first = "";
 		float gpa = 0;
@@ -19,11 +18,13 @@ public class Classroom {
 
 		roster.add(new Student(last, first, gpa));
 		System.out.println("Student added");
-		m.showMenu();
+		Menu.showMenu();
 
 	}
 
 	public static void showClassList() {
-
+		System.out.println(roster.toString());
+		Menu.showMenu();
+		Client.keyPress();
 	}
 }

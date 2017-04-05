@@ -18,26 +18,27 @@ public class Client {
 
 	public static void keyPress() {
 		Scanner user = new Scanner(System.in);
-		Menu m = new Menu();
 		String enteredKey = "";
 		enteredKey = user.nextLine();
 
 		switch (enteredKey) {
-			case "m":
-			case "M":
-				m.showMenu();
+			case "1":
+				Classroom.showClassList();
 				break;
 			case "2":
 				Classroom.createStudent();
 				break;
-
+			case "m":
+			case "M":
+				Menu.showMenu();
+				break;
 			case "e":
 			case "E":
 				System.exit(0);
 				break;
 			default:
 				System.out.println("Please enter a registered key.");
-				m.showMenu();
+				Menu.showMenu();
 				break;
 		}
 
