@@ -28,6 +28,9 @@ public class Client {
 			case "2":
 				Classroom.createStudent();
 				break;
+			case"3":
+				DataHandler.fullSave();
+				break;
 			case "m":
 			case "M":
 				Menu.showMenu();
